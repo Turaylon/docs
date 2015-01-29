@@ -1,27 +1,27 @@
-# Package Development
+# Sviluppo Package
 
-- [Introduction](#introduction)
-- [Creating A Package](#creating-a-package)
-- [Package Structure](#package-structure)
+- [Introduzione](#introduction)
+- [Creare un Package](#creating-a-package)
+- [Struttura di un Package](#package-structure)
 - [Service Providers](#service-providers)
-- [Package Conventions](#package-conventions)
-- [Development Workflow](#development-workflow)
-- [Package Routing](#package-routing)
-- [Package Configuration](#package-configuration)
-- [Package Migrations](#package-migrations)
-- [Package Assets](#package-assets)
-- [Publishing Packages](#publishing-packages)
+- [Convenzioni dei Package](#package-conventions)
+- [Workflow di Sviluppo](#development-workflow)
+- [Routing del Package](#package-routing)
+- [Configurazione del Package](#package-configuration)
+- [Migrazioni del Package](#package-migrations)
+- [Assets del Package](#package-assets)
+- [Pubblicazione dei Packages](#publishing-packages)
 
 <a name="introduction"></a>
-## Introduction
+## Introduzione
 
-Packages are the primary way of adding functionality to Laravel. Packages might be anything from a great way to work with dates like [Carbon](https://github.com/briannesbitt/Carbon), or an entire BDD testing framework like [Behat](https://github.com/Behat/Behat).
+I pacchetti sono il modo migliore per aggiungere funzionalità a Laravel. I Packages possono essere di tutto: da qualcosa di comodo da usare per lavorare con le date come [Carbon](https://github.com/briannesbitt/Carbon), o un intero framework di testing come [Behat](https://github.com/Behat/Behat).
 
-Of course, there are different types of packages. Some packages are stand-alone, meaning they work with any framework, not just Laravel. Both Carbon and Behat are examples of stand-alone packages. Any of these packages may be used with Laravel by simply requesting them in your `composer.json` file.
+Come puoi ben intuire, di conseguenza, ci sono svariati tipi di package. Alcuni sono standalone, quindi possono essere usati con qualsiasi framework, non solo Laravel. Entrambi: Carbon e Behat sono esempi di pacchetti standalone. Ognuno di questi pacchetti possono essere utilizzati con Laravel semplicemente richiedendoli nel file `composer.json`.
 
-On the other hand, other packages are specifically intended for use with Laravel. In previous versions of Laravel, these types of packages were called "bundles". These packages may have routes, controllers, views, configuration, and migrations specifically intended to enhance a Laravel application. As no special process is needed to develop stand-alone packages, this guide primarily covers the development of those that are Laravel specific.
+D'altronde, altri pacchetti sono specifichi per l'uso con Laravel. Nelle versioni precedenti di Laravel, questi tipi di pacchetti venivano chiamati "bundles". Questi pacchetti possono avere routes, controllers, views, configurazioni e migrazioni sviluppati per migliorare le applicazioni Laravel. Poiché non è necessario alcun processo speciale per sviluppare pacchetti standalone, questa guida si occupa principalmente di sviluppo di pacchetti specifichi per Laravel.
 
-All Laravel packages are distributed via [Packagist](http://packagist.org) and [Composer](http://getcomposer.org), so learning about these wonderful PHP package distribution tools is essential.
+Tutti i pacchetti Laravel sono distribuiti tramite [Packagist](http://packagist.org) e [Composer](http://getcomposer.org), quindi imparare qualcosa di questi mangifici strumenti di distrubuzione di package PHP è essenziale
 
 <a name="creating-a-package"></a>
 ## Creating A Package
